@@ -37,7 +37,7 @@ __pycache__/
 *.spv
 *.metallib
 *.bin
-!policies/**/*.bin
+!**/policies/**/*.bin
 !firmware/**/*.bin
 firmware/wcn7850/*.bin
 *.mbn

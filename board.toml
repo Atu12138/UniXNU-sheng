@@ -300,3 +300,9 @@ CI_ENABLE_METAL_GPU = "0"
 # image is what the board's driver reads back.
 "ramdisk_compression" = "uefi-chunks"
 "ramdisk_max_bytes" = 199229440
+# The stock boot.img on this board is an Android boot v4 image, and its ABL
+# rejects a v0 header and falls back to fastboot. Pack v4 natively instead of
+# repacking afterwards: bootimg.py verifies v3/v4 headers and mkbootimg.py
+# writes the 1584-byte v4 header with signature_size 0, the geometry the stock
+# image uses.
+"header_version" = 4
